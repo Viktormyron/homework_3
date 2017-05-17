@@ -10,6 +10,7 @@ background: linear-gradient(to bottom,
     #40c6d3 175px, #0c739f 1000px);
 background-repeat: no-repeat;
 height: 1000px;
+width: 100%;
 }
 .perents{
   height: 970px;
