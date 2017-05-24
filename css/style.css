@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-body{  background: #0c739f;
+body{  background-color:#0c739f;
 background: linear-gradient(to bottom,
     #128aa7, #128aa7 30px,
     #5ef0ff 30px, #5ef0ff 31px,
@@ -18,7 +18,8 @@ width: 100%;
   background: white;
   border: 1px solid black;
   box-shadow: 0 0 10px;
-  margin-left: 150px;
+  margin: auto;
+  text-align: center;
   overflow: hidden;
 
 }
@@ -35,11 +36,15 @@ width: 100%;
 }
 .contact {
   float: right;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+.contact li{
+  display: block;
   color:#329ab3;
   font-size: 15px;
   font-family: sans-serif;
-  margin-right: 30px;
-  margin-top: 10px;
+  text-align: left;
 }
 .country{
   clear: both;
@@ -63,45 +68,61 @@ width: 100%;
   width: 1050px;
   margin-top: 3px;
 }
-.menu {
-  background: #323232;
-  padding: 5px;
-  border-bottom: 1px solid black;
-  box-shadow: 0 0 10px;
-  margin-top: -3px;
+ul.menu {
+   background: #323232;
+    list-style: none;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 10px;
+    margin-top: -3px;
 }
-.menu a{
-  color: white;
-  font-size: 15px;
-  font-family: sans-serif;
-  text-align: center;
-  text-decoration: none;
+ul.menu:after {
+    display: block;
+    content: '';
+    clear: both;
 }
-.menu li{
-  display: inline-block;
-  padding-left: 60px;
+li.menu__item {
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: 50px;
 }
-.menu_1{
-width: 120px;
-background: #323232;
-padding: 5px;
-padding-left: 10px;
-margin-left: 175px;
-border-bottom: 1px solid black;
-box-shadow: 0 0 10px;
-position: absolute;
-z-index: 1;
+a.menu__link {
+    display: block;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
 }
-.menu_1 a{
-color: white;
-font-size: 15px;
-font-family: sans-serif;
-text-decoration: none;
+a.menu__link:hover {
+    background-color:black;
+    color: white;
 }
-.menu_1 li{
+ul.submenu {
+  list-style: none;
+    display: none;
+    position: absolute;
+    width: 150px;
+    top: 25px;
+    left: 0;
+    box-shadow: 0 0 10px
+}
+li.submenu__link{
   display: block;
 }
-
+a.submenu__link {
+    display: block;
+    color: white;
+    background: #323232;
+    text-decoration: none;
+    font-family: sans-serif;
+    padding: 5px;
+}
+a.submenu__link:hover {
+    text-decoration: underline;
+}
+ul.menu > li.menu__item:hover > ul.submenu {
+    display: block;
+}
 .information{
   float: left;
   max-width: 220px;
